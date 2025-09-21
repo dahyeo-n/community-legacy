@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
-<div class="multiplication-tables-page">
+<div class="container multiplication-tables-page">
   <h1>🔢 Multiplication Tables</h1>
   <div class="multiplication-tables-container">
     <% 
