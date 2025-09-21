@@ -62,7 +62,7 @@
 
     <div class="navigation-links">
       <a href="./select-number.jsp" class="back-btn">← Choose Another Number</a>
-      <!-- <a href="../main/main.jsp" class="home-btn">🏠 Back to Home</a> -->
+      <a href="../main/main.jsp" class="home-btn">🏠 Back to Home</a>
     </div>
   </div>
 </body>

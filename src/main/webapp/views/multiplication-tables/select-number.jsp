@@ -29,6 +29,10 @@
           %>
         </div>
       </div>
+
+      <div class="back-link">
+        <a href="../main/main.jsp">← Back to Home</a>
+      </div>
     </div>
   </body>
 </html>

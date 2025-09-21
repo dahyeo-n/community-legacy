@@ -5,13 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Community Legacy</title>
-    <link rel="stylesheet" href="./css/common/layout.css">
-    <link rel="stylesheet" href="./css/pages/main.css">
-    <link rel="stylesheet" href="./css/pages/multiplication-tables.css">
+    <script>
+      window.location.href="./views/main/main.jsp"
+    </script>
   </head>
 
   <body>
-    <!-- <jsp:include page="views/main/main.jsp"/> -->
-    <jsp:include page="views/multiplication-tables/multiplication-tables.jsp"/>
   </body>
 </html>
