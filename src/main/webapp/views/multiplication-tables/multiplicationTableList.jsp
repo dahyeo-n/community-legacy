@@ -36,8 +36,8 @@
     </div>
 
     <div class="navigation-links">
-      <a href="./multiplicationTableSelect.jsp" class="back-btn">🎯 Select Individual Number</a>
-      <a href="../main/main.jsp" class="home-btn">🏠 Back to Home</a>
+      <a href="<%= request.getContextPath() %>/multiplication-tables/selectMultiplicationTableView.do" class="back-btn">🎯 Select Individual Number</a>
+      <a href="<%= request.getContextPath() %>/mainView.do" class="home-btn">🏠 Back to Home</a>
     </div>
   </div>
 </body>

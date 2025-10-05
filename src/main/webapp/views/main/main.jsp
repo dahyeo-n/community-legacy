@@ -16,14 +16,14 @@
 
     <div class="menu-container">
       <div class="menu-grid">
-        <a href="../../views/multiplication-tables/multiplicationTableList.jsp" class="menu-card all-tables">
+        <a href="<%= request.getContextPath() %>/multiplication-tables/getMultiplicationTableListView.do" class="menu-card all-tables">
           <div class="card-icon">📊</div>
           <h3>All Tables</h3>
           <p>View all multiplication tables from 2 to 9 at once</p>
           <div class="card-arrow">→</div>
         </a>
 
-        <a href="../../views/multiplication-tables/multiplicationTableSelect.jsp" class="menu-card select-number">
+        <a href="<%= request.getContextPath() %>/multiplication-tables/selectMultiplicationTableView.do" class="menu-card select-number">
           <div class="card-icon">🎯</div>
           <h3>Select Number</h3>
           <p>Choose a specific number to see its multiplication table</p>

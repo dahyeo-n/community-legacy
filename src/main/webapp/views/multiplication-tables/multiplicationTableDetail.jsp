@@ -33,7 +33,7 @@
   %>
     <script>
       alert("Invalid value! Please enter a number between 2 and 9.");
-      window.location.href="./multiplicationTableSelect.jsp";
+      window.location.href="<%= request.getContextPath() %>/multiplication-tables/selectMultiplicationTableView.do";
     </script>
   <%
     }
@@ -60,8 +60,8 @@
     </div>
 
     <div class="navigation-links">
-      <a href="./multiplicationTableSelect.jsp" class="back-btn">← Choose Another Number</a>
-      <a href="../main/main.jsp" class="home-btn">🏠 Back to Home</a>
+      <a href="<%= request.getContextPath() %>/multiplication-tables/selectMultiplicationTableView.do" class="back-btn">← Choose Another Number</a>
+      <a href="<%= request.getContextPath() %>/mainView.do" class="home-btn">🏠 Back to Home</a>
     </div>
   </div>
 </body>

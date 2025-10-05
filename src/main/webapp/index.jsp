@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Community Legacy</title>
     <script>
-      window.location.href="./views/main/main.jsp"
+      window.location.href="<%= request.getContextPath() %>/mainView.do";
     </script>
   </head>
 

@@ -18,7 +18,7 @@
           <%
             for(int i = 2; i <= 9; i++) {
           %>
-            <a href="./multiplicationTableDetail.jsp?number=<%= i %>" class="number-card">
+            <a href="<%= request.getContextPath() %>/multiplication-tables/getMultiplicationTableView.do?number=<%= i %>" class="number-card">
               <div class="number-display"><%= i %></div>
               <div class="number-label">Multiply by <%= i %></div>
             </a>
@@ -29,7 +29,7 @@
       </div>
 
       <div class="back-link">
-        <a href="../main/main.jsp">← Back to Home</a>
+        <a href="<%= request.getContextPath() %>/mainView.do">← Back to Home</a>
       </div>
     </div>
   </body>
