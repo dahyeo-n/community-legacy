@@ -16,21 +16,19 @@
 
     <div class="menu-container">
       <div class="menu-grid">
-
-        <a href="../../views/multiplication-tables/multiplication-tables.jsp" class="menu-card all-tables">
+        <a href="../../views/multiplication-tables/multiplicationTableList.jsp" class="menu-card all-tables">
           <div class="card-icon">📊</div>
           <h3>All Tables</h3>
           <p>View all multiplication tables from 2 to 9 at once</p>
           <div class="card-arrow">→</div>
         </a>
 
-        <a href="../../views/multiplication-tables/select-number.jsp" class="menu-card select-number">
+        <a href="../../views/multiplication-tables/multiplicationTableSelect.jsp" class="menu-card select-number">
           <div class="card-icon">🎯</div>
           <h3>Select Number</h3>
           <p>Choose a specific number to see its multiplication table</p>
           <div class="card-arrow">→</div>
         </a>
-
       </div>
     </div>
 

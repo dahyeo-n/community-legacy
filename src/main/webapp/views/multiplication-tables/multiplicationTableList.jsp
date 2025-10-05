@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>All Multiplication Tables</title>
   <link rel="stylesheet" href="../../css/common/layout.css">
-  <link rel="stylesheet" href="../../css/pages/multiplication-tables.css">
+  <link rel="stylesheet" href="../../css/pages/multiplicationTableList.css">
 </head>
 
 <body>
@@ -36,7 +36,7 @@
     </div>
 
     <div class="navigation-links">
-      <a href="./select-number.jsp" class="back-btn">🎯 Select Individual Number</a>
+      <a href="./multiplicationTableSelect.jsp" class="back-btn">🎯 Select Individual Number</a>
       <a href="../main/main.jsp" class="home-btn">🏠 Back to Home</a>
     </div>
   </div>
