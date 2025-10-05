@@ -1,25 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%
-  String numberParam = request.getParameter("number");
-  int number = 2;
-  boolean isValidNumber = true;
-
-  if(numberParam != null && !numberParam.isEmpty()) {
-    try {
-      int inputNumber = Integer.parseInt(numberParam);
-      if(inputNumber >= 2 && inputNumber <= 9) {
-        number = inputNumber;
-      } else {
-        isValidNumber = false;
-      }
-    } catch (NumberFormatException e) {
-      isValidNumber = false;
-    }
-  } else {
-    isValidNumber = false;
-  }
-%>
-
+<%@ page import="com.sample.multiplication.table.domain.MultiplicationTable" %>
+<%@ page import="com.sample.multiplication.table.domain.MultiplicationTableRow" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,7 +10,8 @@
   <link rel="stylesheet" href="../../css/common/layout.css">
   <link rel="stylesheet" href="../../css/pages/multiplicationTableDetail.css">
   <%
-    if(!isValidNumber) {
+    MultiplicationTable multiplicationTable = (MultiplicationTable) request.getAttribute("multiplicationTable");
+    if (multiplicationTable == null) {
   %>
     <script>
       alert("Invalid value! Please enter a number between 2 and 9.");
@@ -45,17 +27,22 @@
     <h1>Multiplication Table</h1>
     <div class="table-container">
       <div class="single-table">
-        <h2>Multiply by <%= number %></h2>
-        <ul>
-          <%
-            for(int i = 1; i <= 9; i++) {
-              int result = number * i;
-          %>
-            <li><%= number %> × <%= i %> = <%= result %></li>
-          <%
-            }
-          %>
-        </ul>
+        <%
+          if (multiplicationTable != null) {
+        %> 
+          <h2>Multiply by <%= multiplicationTable.getNumber() %></h2>
+          <ul>
+            <%
+              for (MultiplicationTableRow row : multiplicationTable.getRows()) {
+            %>
+                <li><%= row.getMultiplier() %> × <%= row.getMultiplicand() %> = <%= row.getProduct() %></li>
+            <%
+              }
+            %>
+          </ul>
+        <%
+          }
+        %>
       </div>
     </div>
 
