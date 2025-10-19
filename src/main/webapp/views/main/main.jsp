@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,14 +17,16 @@
 
     <div class="menu-container">
       <div class="menu-grid">
-        <a href="<%= request.getContextPath() %>/multiplication-tables/getMultiplicationTableListView.do" class="menu-card all-tables">
+        <c:url value="/multiplication-tables/getMultiplicationTableListView.do" var="getMultiplicationTableListViewUrl" />
+        <a href="${getMultiplicationTableListViewUrl}" class="menu-card all-tables">
           <div class="card-icon">📊</div>
           <h3>All Tables</h3>
           <p>View all multiplication tables from 2 to 9 at once</p>
           <div class="card-arrow">→</div>
         </a>
 
-        <a href="<%= request.getContextPath() %>/multiplication-tables/selectMultiplicationTableView.do" class="menu-card select-number">
+        <c:url value="/multiplication-tables/selectMultiplicationTableView.do" var="selectMultiplicationTableViewUrl" />
+        <a href="${selectMultiplicationTableViewUrl}" class="menu-card select-number">
           <div class="card-icon">🎯</div>
           <h3>Select Number</h3>
           <p>Choose a specific number to see its multiplication table</p>
