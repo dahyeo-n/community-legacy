@@ -1,34 +1,33 @@
 .main-page {
-  padding: 2rem 0 !important;
-  margin: 1rem 0 !important;
+  padding: 3rem 0;
+  margin: 0 auto;
   min-height: calc(100vh - 2rem);
-  max-width: 900px !important;
-  width: 95% !important;
+  max-width: 1200px;
+  width: 95%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  background: white;
+  text-align: center;
 }
 
 .main-page h1 {
   text-align: center;
   color: #2d3748;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .subtitle {
   text-align: center;
   color: #4a5568;
-  font-size: 1.2rem;
-  font-weight: 500;
+  font-size: 1.1rem;
+  font-weight: 400;
   margin-bottom: 3rem;
-  opacity: 0.8;
+  margin-top: 0.5rem;
 }
 
 .menu-container {
@@ -38,7 +37,7 @@
 .menu-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  gap: 3rem;
   max-width: 700px;
   margin: 0 auto;
 }
@@ -46,144 +45,124 @@
 .menu-card {
   display: block;
   text-decoration: none;
-  background: linear-gradient(145deg, #ffffff, #f8f9ff);
-  border-radius: 20px;
+  background: white;
+  border-radius: 12px;
   padding: 2.5rem 2rem;
-  box-shadow: 
-    0 15px 35px rgba(102, 126, 234, 0.15),
-    0 5px 20px rgba(0, 0, 0, 0.08),
-    inset 0 1px 0 rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(102, 126, 234, 0.1);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   position: relative;
   overflow: hidden;
-  backdrop-filter: blur(10px);
   text-align: center;
-}
-
-.menu-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 5px;
-  border-radius: 20px 20px 0 0;
-  transition: all 0.3s ease;
-}
-
-.all-tables::before {
-  background: linear-gradient(90deg, #667eea, #764ba2);
-}
-
-.select-number::before {
-  background: linear-gradient(90deg, #f093fb, #f5576c);
+  border: 1px solid #e0e0e0;
 }
 
 .menu-card:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 
-    0 25px 50px rgba(102, 126, 234, 0.25),
-    0 10px 30px rgba(0, 0, 0, 0.15),
-    inset 0 1px 0 rgba(255, 255, 255, 0.9);
-  border-color: rgba(102, 126, 234, 0.3);
-}
-
-.menu-card:hover::before {
-  height: 8px;
+  transform: translateY(-8px) scale(1.02);
+  border-color: #667eea;
+  box-shadow: 0 12px 32px rgba(102, 126, 234, 0.15);
 }
 
 .card-icon {
   font-size: 3rem;
   margin-bottom: 1rem;
   display: block;
-  animation: float 3s ease-in-out infinite;
-}
-
-.all-tables .card-icon {
-  animation-delay: 0s;
-}
-
-.select-number .card-icon {
-  animation-delay: 0.5s;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-}
-
-.menu-card h3 {
-  color: #2d3748;
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.menu-card p {
-  color: #4a5568;
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-  font-weight: 500;
-}
-
-.card-arrow {
-  font-size: 1.5rem;
-  color: #667eea;
-  font-weight: bold;
   transition: all 0.3s ease;
 }
 
+.menu-card:hover .card-icon {
+  transform: scale(1.1);
+}
+
+.menu-card h3 {
+  color: #333;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  transition: color 0.3s ease;
+}
+
+.menu-card:hover h3 {
+  color: #667eea;
+}
+
+.menu-card p {
+  color: #777;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  margin-top: 0.5rem;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.menu-card:hover p {
+  color: #4a5568;
+}
+
+.card-arrow {
+  font-size: 1.2rem;
+  color: #555;
+  font-weight: bold;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  margin-top: 1.5rem;
+  display: block;
+}
+
 .menu-card:hover .card-arrow {
-  transform: translateX(5px);
-  color: #764ba2;
+  transform: translateX(8px) scale(1.1);
+  color: #667eea;
 }
 
 .welcome-info {
   text-align: center;
   padding: 1.5rem;
-  background: rgba(255, 255, 255, 0.7);
-  border-radius: 15px;
-  backdrop-filter: blur(10px);
+  background: linear-gradient(135deg, #f8f9ff 0%, #f0f2ff 100%);
+  border-radius: 12px;
+  margin-top: 1rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
   border: 1px solid rgba(102, 126, 234, 0.1);
+  transition: all 0.3s ease;
+}
+
+.welcome-info:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.1);
 }
 
 .welcome-info p {
   color: #4a5568;
-  font-size: 1rem;
+  font-size: 0.95rem;
   margin-bottom: 0.5rem;
-  font-weight: 500;
+  font-weight: 400;
+  line-height: 1.4;
+  transition: color 0.3s ease;
 }
 
 .welcome-info p:last-child {
   margin-bottom: 0;
-  font-weight: 600;
+  font-weight: 500;
   color: #667eea;
 }
 
-/* 반응형 디자인 */
 @media (max-width: 768px) {
   .main-page {
-    padding: 1.5rem 0 !important;
+    padding: 1.5rem 0;
   }
   
   .main-page h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
   
   .subtitle {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
   }
   
   .menu-grid {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 2.5rem;
     max-width: 400px;
   }
   
@@ -196,10 +175,19 @@
   }
   
   .menu-card h3 {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
   }
   
   .menu-card p {
+    font-size: 0.85rem;
+  }
+  
+  .welcome-info {
+    padding: 1.2rem;
+    margin-top: 1.5rem;
+  }
+  
+  .welcome-info p {
     font-size: 0.9rem;
   }
 }
@@ -218,6 +206,18 @@
   }
   
   .menu-card h3 {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
+  }
+  
+  .menu-card p {
+    font-size: 0.8rem;
+  }
+  
+  .welcome-info {
+    padding: 1rem;
+  }
+  
+  .welcome-info p {
+    font-size: 0.85rem;
   }
 }

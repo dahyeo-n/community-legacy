@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Multiplication Table</title>
   <link rel="stylesheet" href="../../css/common/layout.css">
+  <link rel="stylesheet" href="../../css/common/header.css">
   <link rel="stylesheet" href="../../css/pages/multiplicationTableDetail.css">
   <c:if test="${multiplicationTable == null}">
     <script>
@@ -15,10 +16,12 @@
       window.location.href="${selectMultiplicationTableViewUrl}";
     </script>
   </c:if>
-  </head>
+</head>
 
 <body>
-  <div class="container show-table-page">
+  <jsp:include page="../common/header.jsp" />
+
+  <main class="show-table-page">
     <h1>Multiplication Table</h1>
     <div class="table-container">
       <div class="single-table">
@@ -39,6 +42,6 @@
       <c:url value="/mainView.do" var="mainViewUrl" />
       <a href="${mainViewUrl}" class="home-btn">🏠 Back to Home</a>      
     </div>
-  </div>
+  </main>
 </body>
 </html>

@@ -7,11 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Multiplication Tables</title>
   <link rel="stylesheet" href="../../css/common/layout.css">
+  <link rel="stylesheet" href="../../css/common/header.css">
   <link rel="stylesheet" href="../../css/pages/main.css">
 </head>
 
 <body>
-  <div class="container main-page">
+  <jsp:include page="../common/header.jsp" />
+
+  <main class="main-page">
     <h1>Multiplication</h1>
     <p class="subtitle">Multiplication Tables Learning System</p>
 
@@ -39,6 +42,6 @@
       <p>Welcome to our interactive multiplication table learning system!</p>
       <p>Choose an option above to get started.</p>
     </div>
-  </div>
+  </main>
 </body>
 </html>
